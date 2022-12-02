@@ -1,0 +1,151 @@
+:root {
+    --background: rgb(52, 57, 63);
+    --titles: rgb(232, 102, 236);
+    --base-font: 'Work Sans', sans-serif;
+}
+
+header h1 {
+    color: var(--titles);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    margin: 30px 15px;
+    text-align: center;
+}
+
+header {
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+main {
+    min-height: 0;
+    min-width: 0;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 450px 450px;
+    gap: 30px 10px;
+}
+
+.card {
+    grid-template-areas:
+        "card card card"
+        "card card card";
+    border: 2px dashed #fff;
+    color: var(--titles);
+    padding: 20px 20px;
+    margin: 10px;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.cardHeader {
+    color: var(--titles);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    position: relative;
+    top: -45px;
+    background-color: var(--background);
+    padding: 5px;
+}
+
+.card h2 {
+    margin: 5px 5px;
+
+}
+
+/* .cardText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+} */
+
+.card pre {
+    color: #fff;
+    text-align: left;
+    border-radius: 5px;
+    background-image:
+        linear-gradient(rgba(232, 102, 236, 0.3) 0%,
+            rgba(232, 102, 236, 0.6) 100%);
+    padding: 10px;
+    white-space: pre-wrap;
+}
+
+.card p {
+    margin-top: -20px;
+
+}
+
+body {
+    background-color: var(--background);
+
+}
+
+.cardCode {
+    padding-top: 10px;
+
+}
+
+.card,
+.card h2 {
+    transition: all 0.5s ease-in-out;
+}
+
+/* Setting mouse hover shadow animation */
+.card:hover,
+.cardHeader:hover {
+    box-shadow: inset 0px 0px 8px var(--titles), 0 0 15px var(--titles);
+}
+
+@media only screen and (max-width: 992px) {
+
+    .card {
+        grid-template-areas:
+            "card card"
+            "card card"
+            "card card";
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 450px 450px;
+        gap: 30px 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .card {
+        grid-template-areas:
+            "card"
+            "card"
+            "card"
+            "card"
+            "card"
+            "card";
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 450px 450px;
+        gap: 30px;
+    }
+}
